@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">RepairOrder</string>
+    <string name="name_label">Name!</string>
+    <string name="order_type">Order Type</string>
+    <string name="repair_order">Repair Order</string>
+    <string name="technician">Technician</string>
+    <string name="inspection">Inspection</string>
+    <string name="paint">Paint</string>
+    <string name="parts">Parts</string>
+    <string name="labor">Labor</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="starting_price">0.00</string>
+    <string name="tax">Tax</string>
+    <string name="total">Total</string>
+    <string name="submit">Submit</string>
+    <string name="subheader">TextView</string>
 </resources>
