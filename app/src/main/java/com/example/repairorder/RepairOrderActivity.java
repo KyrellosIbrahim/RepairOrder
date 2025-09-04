@@ -1,9 +1,12 @@
 package com.example.repairorder;
 
 import java.util.Locale;
+import java.util.Random;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,6 +24,15 @@ public class RepairOrderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button submitButton; // step 1: create button variable
+        View.OnClickListener buttonListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random gen = new Random();
+                finish();
+            }
+        };
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_repair_order);
@@ -39,6 +51,9 @@ public class RepairOrderActivity extends AppCompatActivity {
         partsField = findViewById(R.id.partsPlaceholder);
         paintField = findViewById(R.id.paintPlaceholder);
         laborField = findViewById(R.id.laborPlaceholder);
+        submitButton = findViewById(R.id.submitButton);
+
+        submitButton.setOnClickListener(buttonListener);
 
         TextWatcher watcher = new TextWatcher() {
             @Override
