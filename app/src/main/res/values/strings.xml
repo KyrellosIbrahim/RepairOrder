@@ -14,4 +14,14 @@
     <string name="total">Total</string>
     <string name="submit">Submit</string>
     <string name="subheader">TextView</string>
+    <string-array name="order_types">
+        <item>Inspection</item>
+        <item>Oil change</item>
+        <item>Brake change</item>
+        <item>Wheel Alignment</item>
+        <item>Wheel rotation</item>
+        <item>Disc change</item>
+        <item>Body fix</item>
+        <item>Repaint</item>
+    </string-array>
 </resources>

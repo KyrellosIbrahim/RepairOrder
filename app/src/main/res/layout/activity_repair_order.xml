@@ -39,17 +39,15 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="60dp"
         android:text="@string/order_type"
-        app:layout_constraintEnd_toStartOf="@+id/orderTypePlaceholder"
+        app:layout_constraintEnd_toStartOf="@+id/orderTypeSpinner"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/orderTypePlaceholder"
+    <Spinner
+        android:id="@+id/orderTypeSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
-        android:layout_marginTop="180dp"
-        android:ems="10"
-        android:inputType="text"
+        android:layout_marginTop="200dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -180,10 +178,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="536dp"
-        android:text="@string/starting_price"
-        android:focusable="false"
         android:clickable="false"
+        android:focusable="false"
         android:longClickable="false"
+        android:text="@string/starting_price"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -203,10 +201,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="566dp"
-        android:text="@string/starting_price"
-        android:focusable="false"
         android:clickable="false"
+        android:focusable="false"
         android:longClickable="false"
+        android:text="@string/starting_price"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -227,10 +225,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="156dp"
         android:layout_marginTop="596dp"
-        android:text="@string/starting_price"
-        android:focusable="false"
         android:clickable="false"
+        android:focusable="false"
         android:longClickable="false"
+        android:text="@string/starting_price"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,14 +1,16 @@
 package com.example.repairorder;
 
 import java.util.Locale;
-import java.util.Random;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,17 +27,27 @@ public class RepairOrderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Button submitButton; // step 1: create button variable
-        View.OnClickListener buttonListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Random gen = new Random();
-                finish();
-            }
-        };
+        View.OnClickListener buttonListener = view -> finish();
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_repair_order);
+
+        Spinner orderTypeSpinner = findViewById(R.id.orderTypeSpinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.order_types, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        orderTypeSpinner.setAdapter(adapter);
+        orderTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         subtotalField = findViewById(R.id.textSubtotalValue);
         taxField = findViewById(R.id.textTaxValue);
